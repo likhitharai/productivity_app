@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.herock{
+    width: 50%;
+    min-height: 45vh;
+    /* background: linear-gradient(135deg, #192655, #3876BF); */
+    /* background: #192655;  Removed*/
+    color: #fff;
+    position: relative;
+}
+
+
+/* Change anything you want, over here */
+.container{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: #f4351e;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,219,220,1) 10%, rgba(231,22,57,1) 100%, rgba(0,212,255,1) 100%); */
+    border-radius: 50px;
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    /* background: rgba(235, 0, 255, 0.11); -- changed */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+/* .container::before{
+    content: '';
+    width: 120px;
+    height:120px;
+    background: #C2D9FF;
+    border-radius: 50%;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+
+
+.container::after{
+    content: '';
+    width: 120px;
+    height:120px;
+    background: #FFF8C9;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    bottom:-50px;
+    z-index: -1;
+} */
+
+.clock span{
+    font-size: 80px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after{
+    content: '';
+    font-size: 16px;
+    position: absolute;
+    bottom:-5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hh::after{
+    content: "HOURS";
+}
+
+#mm::after{
+    content: "MINS";
+}
+
+#ss::after{
+    content: "SECONDS";
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* CSS for the calender app */
+
+.hero{
+    width: 50%;
+    min-height: 50vh;
+    /* background: linear-gradient(135deg, #192655, #3876BF); -- changed */
+    /* background: #192655; --Removed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.calendar{
+    width: 400px;
+    height: 225px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.left, .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    font-size: 24px;
+}
+
+.right{
+    width: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background:#f4351e;
+    color: #fff;
+}
+#date{
+    font-size: 100px;
+    /* line-height: 90px; */
+}
+
+#month{
+    font-size: 25px;
+}
+
+
+.ddtm{
+    display:inline-block;
+    /* background: linear-gradient(135deg, #192655, #3876BF); */
+    width: 50%;
+    margin-top: -12px;
+    margin-bottom: -118px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------
+To-do-list app's css properties */
+
+.noteplus{
+    display: flex;
+    padding-left: 20%;
+    /* background: linear-gradient(135deg, #192655, #3876BF);------------------- Changed this */
+    min-height: 50vh;
+
+}
+
+.containertd{
+    width: 100%;
+    min-height: 50vh;
+    /* background: linear-gradient(135deg, #192655, #3876BF); Temp remove*/
+    /* padding: 5px 10px 10px 10px ; */
+    margin-top: -25px;
+
+}
+
+.todoapp{
+    width: 500%;
+    max-width: 540px;
+    background: #fff;
+    margin: 80px auto 200px ;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    
+}
+
+.todoapp h2{
+    color:#002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.todoapp img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    padding-left: 20px;
+    /* margin-bottom: 25px; */
+}
+
+.prod{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    padding-left: 0%;
+    padding-top: -100%;
+    background: #edeef0;
+    border-radius: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    /* height: 70px; */
+}
+
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 15px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    /* //Check what is this */
+    user-select: none;
+    cursor: pointer;    
+    position: relative;    
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("/images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration:line-through; 
+}
+
+ul li.checked::before{
+    background-image: url("/images/checked.png");
+}
+
+ul li span{
+    position: absolute;
+    /* Gets the cross mark to the right most corner */
+    right:0;
+    top: 10px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+footer{
+    font-size: 15px;
+    text-align: center;
+    color: rgb(237, 230, 230);
+    font-weight: 15px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    /* background: linear-gradient(135deg, #192655, #3876BF);-------------- Can put back */
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* Habit button */
+.habit{
+    /* background: linear-gradient(135deg, #192655, #3876BF); --------------- Can put back */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prodmain h3{
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.prodmain{
+    
+    margin-left: 10px;
+    padding: 100px auto;
+    margin-left: 20%;
+}
+
+.navbar{
+    height: 65px;
+    padding: 10px;
+    /* background: linear-gradient(20deg,  #ff5945, #192655, #3876BF ); */
+    /* background:#f4351e; Changed this---------------------------------------------------------------- */
+    display: inline-block;
+    /* float:left; */
+    width: 100%;
+    /* background: #ff5945; */
+    /* position: fixed; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar h1{
+    margin-left:3%;
+    color: #fff;
+    background-color: #ec8f84;
+    border-radius: 10px;
+    /* padding:10px 5px auto 10px; */
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.visit button{
+
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background: #ec8f84;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    /* margin-right: 5%; */
+    
+}
+
+button:hover{
+    background-color: #e5948b;
+}
+
+.overall{
+    background: linear-gradient(20deg,#9e9e9e, #212121)
+}

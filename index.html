@@ -1,0 +1,94 @@
+<!-- This is the overall productivity tracking app -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Digital Clock</title>
+</head>
+<body>
+    <div class="overall">
+    <div class="navbar">
+        <h1> 📝  Task trek</h1>
+        <div class="visit">
+            <button onclick="addTask()">Visit my portfolio profile ➞</button>
+        </div>
+    </div>
+    
+    <div class="noteplus">
+    <div class="ddtm">
+    <div class="hero">
+        <div class="calendar">
+            <div class="left">
+                <p id = "date">01</p>
+                <p id = "day">Sunday</p>
+            </div>
+            <div class="right">
+                <p id = "month">January</p>
+                <p id= "year">2024</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+
+    <div class="herock">
+        <div class="container">
+            <div class="clock">
+                <span id = "hh">00</span>
+                <span>:</span>
+                <span id = "mm">00</span>
+                <span>:</span>
+                <span id = "ss">00</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------------------------------------------------------------------- -->
+    <div class="containertd">
+        <div class="todoapp">
+            <h2>To-do List <img src="/images/icon.png"></h2>
+            <div class="row">
+                <input type="text" id ="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+
+
+        <div class="prodmain">
+            <h3>How productive were you? Rate yourself out of 100</h3>
+        
+        <div class="prod">
+            <input type="text" id ="input-box" placeholder="Enter your productivity score">
+                    <button onclick="addTask()">Enter</button>
+        </div>
+    </div>
+    </div>
+
+
+
+    </div>
+        <!-- <script src="/script.js"></script> -->
+
+
+
+<div class="habit">
+    <button>Track your habit</button>
+</div>
+
+<footer>
+    Developed with ❤️ by Likhitha ©2023
+</footer>
+</div>
+    <script src ="/script.js"></script>
+
+</body>
+</html>
